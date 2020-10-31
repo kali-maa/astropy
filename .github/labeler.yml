@@ -1,0 +1,201 @@
+Docs:
+  - docs/*
+  - docs/**/*
+  - examples/*
+  - examples/**/*
+  - licenses/*
+  - CITATION
+  - .mailmap
+  - .readthedocs.yml
+  - *.md
+  - *.rst
+
+testing:
+  - astropy/tests/*
+  - astropy/tests/**/*
+  - astropy/*/tests/*
+  - astropy/**/tests/*
+  - codecov.yml
+  - conftest.py
+  - */conftest.py
+  - */**/conftest.py
+  - azure-pipelines.yml
+  - tox.ini
+  - .circleci/*
+  - .github/*.yml
+  - .github/workflows/*.yml
+  - .pep8speaks.yml
+  - .pyinstaller/*
+  - .pyinstaller/**/*
+  - .travis.yml
+
+external:
+  - astropy/extern/*
+  - astropy/extern/**/*
+  - cextern/*
+  - cextern/**/*
+
+installation:
+  - docs/install.rst
+  - MANIFEST.in
+  - pip-requirements
+  - pyproject.toml
+  - setup.*
+
+Release:
+  - docs/development/releasing.rst
+
+config:
+  - astropy/config/*
+  - astropy/config/**/*
+  - docs/config/*
+
+constants:
+  - astropy/constants/*
+  - astropy/constants/**/*
+  - docs/constants/*
+
+convolution:
+  - astropy/convolution/*
+  - astropy/convolution/**/*
+  - docs/convolution/*
+  - docs/convolution/**/*
+
+coordinates:
+  - astropy/coordinates/*
+  - astropy/coordinates/**/*
+  - docs/coordinates/*
+
+cosmology:
+  - astropy/cosmology/*
+  - astropy/cosmology/**/*
+  - docs/cosmology/*
+
+io.ascii:
+  - astropy/io/ascii/*
+  - astropy/io/ascii/**/*
+  - docs/io/ascii/*
+
+io.fits:
+  - astropy/io/fits/*
+  - astropy/io/fits/**/*
+  - docs/io/fits/*
+  - docs/io/fits/**/*
+  - cextern/cfitsio/*
+  - cextern/cfitsio/**/*
+
+io.misc:
+  - astropy/io/misc/*
+  - astropy/io/misc/pandas/*
+  - astropy/io/misc/pandas/**/*
+  - astropy/io/misc/tests/*
+  - astropy/io/misc/tests/**/*
+  - docs/io/misc.rst
+
+io.misc.asdf:
+  - astropy/io/misc/asdf/*
+  - astropy/io/misc/asdf/**/*
+  - docs/io/asdf-schemas.rst
+
+io.registry:
+  - astropy/io/*
+  - astropy/io/tests/*
+  - docs/io/registry.rst
+
+io.votable:
+  - astropy/io/votable/*
+  - astropy/io/votable/**/*
+  - docs/io/votable/*
+
+logging:
+  - astropy/logger.py
+  - astropy/tests/test_logger.py
+  - docs/logging.rst
+
+modeling:
+  - astropy/modeling/*
+  - astropy/modeling/**/*
+  - docs/modeling/*
+
+nddata:
+  - astropy/nddata/*
+  - astropy/nddata/**/*
+  - docs/nddata/*
+  - docs/nddata/**/*
+
+samp:
+  - astropy/samp/*
+  - astropy/samp/**/*
+  - docs/samp/*
+
+stats:
+  - astropy/stats/*
+  - astropy/stats/**/*
+  - docs/stats/*
+
+table:
+  - astropy/table/*
+  - astropy/table/**/*
+  - docs/table/*
+
+time:
+  - astropy/time/*
+  - astropy/time/**/*
+  - docs/time/*
+
+timeseries:
+  - astropy/timeseries/*
+  - astropy/timeseries/**/*
+  - docs/timeseries/*
+
+uncertainty:
+  - astropy/uncertainty/*
+  - astropy/uncertainty/**/*
+  - docs/uncertainty/*
+
+unified-io:
+  - docs/io/unified.rst
+
+units:
+  - astropy/units/*
+  - astropy/units/**/*
+  - docs/units/*
+
+utils:
+  - astropy/utils/*
+  - astropy/utils/**/*
+  - docs/utils/*
+  - !astropy/utils/iers/*
+  - !astropy/utils/iers/**/*
+  - !docs/utils/iers.rst
+
+utils.iers:
+  - astropy/utils/iers/*
+  - astropy/utils/iers/**/*
+  - docs/utils/iers.rst
+
+visualization:
+  - astropy/visualization/*
+  - astropy/visualization/**/*
+  - docs/visualization/*
+  - !astropy/visualization/wcsaxes/*
+  - !astropy/visualization/wcsaxes/**/*
+
+visualization.wcsaxes:
+  - astropy/visualization/wcsaxes/*
+  - astropy/visualization/wcsaxes/**/*
+  - docs/visualization/wcsaxes/*
+
+wcs:
+  - astropy/wcs/*
+  - astropy/wcs/**/*
+  - docs/wcs/*
+  - docs/wcs/**/*
+  - !astropy/wcs/wcsapi/*
+  - !astropy/wcs/wcsapi/**/*
+  - !docs/wcs/wcsapi.rst
+
+wcs.wcsapi:
+  - astropy/wcs/wcsapi/*
+  - astropy/wcs/wcsapi/**/*
+  - docs/wcs/wcsapi.rst
