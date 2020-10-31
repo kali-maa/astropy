@@ -165,9 +165,9 @@ utils:
   - astropy/utils/*
   - astropy/utils/**/*
   - docs/utils/*
-  - !astropy/utils/iers/*
-  - !astropy/utils/iers/**/*
-  - !docs/utils/iers.rst
+  - '!astropy/utils/iers/*'
+  - '!astropy/utils/iers/**/*'
+  - '!docs/utils/iers.rst'
 
 utils.iers:
   - astropy/utils/iers/*
@@ -178,8 +178,8 @@ visualization:
   - astropy/visualization/*
   - astropy/visualization/**/*
   - docs/visualization/*
-  - !astropy/visualization/wcsaxes/*
-  - !astropy/visualization/wcsaxes/**/*
+  - '!astropy/visualization/wcsaxes/*'
+  - '!astropy/visualization/wcsaxes/**/*'
 
 visualization.wcsaxes:
   - astropy/visualization/wcsaxes/*
@@ -191,9 +191,9 @@ wcs:
   - astropy/wcs/**/*
   - docs/wcs/*
   - docs/wcs/**/*
-  - !astropy/wcs/wcsapi/*
-  - !astropy/wcs/wcsapi/**/*
-  - !docs/wcs/wcsapi.rst
+  - '!astropy/wcs/wcsapi/*'
+  - '!astropy/wcs/wcsapi/**/*'
+  - '!docs/wcs/wcsapi.rst'
 
 wcs.wcsapi:
   - astropy/wcs/wcsapi/*
