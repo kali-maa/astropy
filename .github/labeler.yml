@@ -46,7 +46,7 @@ Release:
   - docs/development/releasing.rst
 
 config:
-  - */config/**/*
+  - **/config/**/*
 
 constants:
   - astropy/constants/**/*
