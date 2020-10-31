@@ -73,6 +73,7 @@ astropy.visualization
 astropy.wcs
 ^^^^^^^^^^^
 
+- New shiny thing!
 
 API Changes
 -----------

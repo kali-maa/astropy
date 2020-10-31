@@ -67,6 +67,8 @@ def test_wrapper():
     assert wrapper.pixel_bounds is None
     assert np.all(wrapper.axis_correlation_matrix)
 
+    assert 'ooo' in wcs.spooky
+
 
 def test_wrapper_invalid():
 
