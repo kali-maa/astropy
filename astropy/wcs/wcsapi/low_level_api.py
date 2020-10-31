@@ -15,6 +15,10 @@ class BaseLowLevelWCS(metaclass=abc.ABCMeta):
     """
 
     @property
+    def spooky(self):
+        return 'oooOOOooOOOooo'
+
+    @property
     @abc.abstractmethod
     def pixel_n_dim(self):
         """
