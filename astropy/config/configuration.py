@@ -36,6 +36,9 @@ __all__ = ['InvalidConfigurationItemWarning',
            'generate_config']
 
 
+
+
+
 class InvalidConfigurationItemWarning(AstropyWarning):
     """ A Warning that is issued when the configuration value specified in the
     astropy configuration file does not match the type expected for that

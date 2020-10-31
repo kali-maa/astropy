@@ -6,6 +6,8 @@
 Configuration System (`astropy.config`)
 ***************************************
 
+Hello!
+
 Introduction
 ============
 
