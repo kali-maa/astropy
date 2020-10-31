@@ -7,8 +7,8 @@ Docs:
   - CITATION
   - .mailmap
   - .readthedocs.yml
-  - *.md
-  - *.rst
+  - '*.md'
+  - '*.rst'
 
 testing:
   - astropy/tests/*
@@ -17,8 +17,8 @@ testing:
   - astropy/**/tests/*
   - codecov.yml
   - conftest.py
-  - */conftest.py
-  - */**/conftest.py
+  - '*/conftest.py'
+  - '*/**/conftest.py'
   - azure-pipelines.yml
   - tox.ini
   - .circleci/*
