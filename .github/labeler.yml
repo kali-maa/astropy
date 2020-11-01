@@ -132,11 +132,7 @@ units:
   - docs/units/*
 
 utils:
-  - astropy/utils/**/*
-  - docs/utils/*
-  - '!astropy/utils/iers/*'
-  - '!astropy/utils/iers/**/*'
-  - '!docs/utils/iers.rst'
+  - any: ['astropy/utils/**/*', 'docs/utils/*', '!astropy/utils/iers/*', '!astropy/utils/iers/**/*', '!docs/utils/iers.rst']
 
 utils.iers:
   - astropy/utils/iers/**/*
