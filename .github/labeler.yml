@@ -143,20 +143,14 @@ utils.iers:
   - docs/utils/iers.rst
 
 visualization:
-  - astropy/visualization/**/*
-  - docs/visualization/*
-  - '!astropy/visualization/wcsaxes/*'
-  - '!astropy/visualization/wcsaxes/**/*'
+  - any: ['astropy/visualization/**/*', 'docs/visualization/*', '!astropy/visualization/wcsaxes/*', '!astropy/visualization/wcsaxes/**/*']
 
 visualization.wcsaxes:
   - astropy/visualization/wcsaxes/**/*
   - docs/visualization/wcsaxes/*
 
 wcs:
-  - astropy/wcs/**/*
-  - docs/wcs/**/*
-  - '!astropy/wcs/wcsapi/**/*'
-  - '!docs/wcs/wcsapi.rst'
+  - any: ['astropy/wcs/**/*', 'docs/wcs/**/*', '!astropy/wcs/wcsapi/**/*', '!docs/wcs/wcsapi.rst']
 
 wcs.wcsapi:
   - astropy/wcs/wcsapi/**/*
