@@ -14,13 +14,11 @@ testing:
   - astropy/**/tests/*
   - codecov.yml
   - conftest.py
-  - '*/conftest.py'
-  - '*/**/conftest.py'
+  - '**/conftest.py'
   - azure-pipelines.yml
   - tox.ini
   - .circleci/*
-  - .github/*.yml
-  - .github/workflows/*.yml
+  - .github/**/*.yml
   - .pep8speaks.yml
   - .pyinstaller/**/*
   - .travis.yml
@@ -40,32 +38,25 @@ Release:
   - docs/development/releasing.rst
 
 config:
-  - astropy/config/**/*
-  - docs/config/*
+  - '**/config/**/*'
 
 constants:
-  - astropy/constants/**/*
-  - docs/constants/*
+  - '**/constants/**/*'
 
 convolution:
-  - astropy/convolution/**/*
-  - docs/convolution/**/*
+  - '**/convolution/**/*'
 
 coordinates:
-  - astropy/coordinates/**/*
-  - docs/coordinates/*
+  - '**/coordinates/**/*'
 
 cosmology:
-  - astropy/cosmology/**/*
-  - docs/cosmology/*
+  - '**/cosmology/**/*'
 
 io.ascii:
-  - astropy/io/ascii/**/*
-  - docs/io/ascii/*
+  - '**/io/ascii/**/*'
 
 io.fits:
-  - astropy/io/fits/**/*
-  - docs/io/fits/**/*
+  - '**/io/fits/**/*'
   - cextern/cfitsio/**/*
 
 io.misc:
@@ -84,8 +75,7 @@ io.registry:
   - docs/io/registry.rst
 
 io.votable:
-  - astropy/io/votable/**/*
-  - docs/io/votable/*
+  - '**/io/votable/**/*'
 
 logging:
   - astropy/logger.py
@@ -93,43 +83,34 @@ logging:
   - docs/logging.rst
 
 modeling:
-  - astropy/modeling/**/*
-  - docs/modeling/*
+  - '**/modeling/**/*'
 
 nddata:
-  - astropy/nddata/**/*
-  - docs/nddata/**/*
+  - '**/nddata/**/*'
 
 samp:
-  - astropy/samp/**/*
-  - docs/samp/*
+  - '**/samp/**/*'
 
 stats:
-  - astropy/stats/**/*
-  - docs/stats/*
+  - '**/stats/**/*'
 
 table:
-  - astropy/table/**/*
-  - docs/table/*
+  - '**/table/**/*'
 
 time:
-  - astropy/time/**/*
-  - docs/time/*
+  - '**/time/**/*'
 
 timeseries:
-  - astropy/timeseries/**/*
-  - docs/timeseries/*
+  - '**/timeseries/**/*'
 
 uncertainty:
-  - astropy/uncertainty/**/*
-  - docs/uncertainty/*
+  - '**/uncertainty/**/*'
 
 unified-io:
   - docs/io/unified.rst
 
 units:
-  - astropy/units/**/*
-  - docs/units/*
+  - '**/units/**/*'
 
 utils:
   - any: ['astropy/utils/**/*', 'docs/utils/*', '!astropy/utils/iers/*', '!astropy/utils/iers/**/*', '!docs/utils/iers.rst']
@@ -142,8 +123,7 @@ visualization:
   - any: ['**/visualization/**/*', '!astropy/visualization/wcsaxes/**/*']
 
 visualization.wcsaxes:
-  - astropy/visualization/wcsaxes/**/*
-  - docs/visualization/wcsaxes/*
+  - '**/visualization/wcsaxes/**/*'
 
 wcs:
   - any: ['**/wcs/**/*', '!astropy/wcs/wcsapi/**/*', '!docs/wcs/wcsapi.rst']
