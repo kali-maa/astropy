@@ -1,5 +1,9 @@
 Docs:
-  - docs/**/*
+  - docs/*
+  - docs/_static/*
+  - docs/_templates/*
+  - docs/development/**/*
+  - docs/whatsnew/*
   - examples/**/*
   - licenses/*
   - CITATION
@@ -10,8 +14,6 @@ Docs:
 
 testing:
   - astropy/tests/**/*
-  - astropy/*/tests/*
-  - astropy/**/tests/*
   - codecov.yml
   - conftest.py
   - '**/conftest.py'
