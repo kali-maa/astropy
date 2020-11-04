@@ -19,6 +19,7 @@ from astropy.utils.exceptions import AstropyWarning, AstropyUserWarning
 _excepthook = sys.__excepthook__
 _showwarning = warnings.showwarning
 
+print('Hello...')
 
 try:
     ip = get_ipython()
