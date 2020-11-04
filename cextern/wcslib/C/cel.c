@@ -65,7 +65,7 @@ const int cel_prjerr[] = {
 int celini(struct celprm *cel)
 
 {
-  register int k;
+  register int k=0;
 
   if (cel == 0x0) return CELERR_NULL_POINTER;
 
