@@ -17,7 +17,7 @@ There are several different procedures below, depending on the situation:
     - :ref:`release-procedure-bug-fix-release`
 
 For a signed release, see :ref:`key-signing-info` for relevant setup
-instructions.
+instructions. Hello!
 
 
 .. _release-procedure:
