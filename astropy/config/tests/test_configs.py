@@ -26,6 +26,10 @@ def teardown_module():
     configuration._cfgobjs.update(OLD_CONFIG)
 
 
+def test_et_phone_home():
+    pass
+
+
 def test_paths():
     assert 'astropy' in paths.get_config_dir()
     assert 'astropy' in paths.get_cache_dir()

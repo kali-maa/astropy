@@ -14,6 +14,10 @@ __all__ = ['get_config_dir', 'get_cache_dir', 'set_temp_config',
            'set_temp_cache']
 
 
+def et_phone_home():
+    pass
+
+
 def _find_home():
     """Locates and return the home directory (or best approximation) on this
     system.
