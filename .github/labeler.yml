@@ -107,7 +107,7 @@ units:
   - astropy/extern/ply/**/*
 
 utils:
-  - any: ['astropy/utils/**/*', 'docs/utils/*', 'cextern/expat/**/*, '!astropy/utils/iers/*', '!astropy/utils/iers/**/*', '!docs/utils/iers.rst']
+  - any: ['astropy/utils/**/*', 'docs/utils/*', 'cextern/expat/**/*', '!astropy/utils/iers/*', '!astropy/utils/iers/**/*', '!docs/utils/iers.rst']
 
 utils.iers:
   - astropy/utils/iers/**/*
@@ -120,7 +120,7 @@ visualization.wcsaxes:
   - '**/visualization/wcsaxes/**/*'
 
 wcs:
-  - any: ['**/wcs/**/*', 'cextern/wcslib/**/*', !astropy/wcs/wcsapi/**/*', '!docs/wcs/wcsapi.rst']
+  - any: ['**/wcs/**/*', 'cextern/wcslib/**/*', '!astropy/wcs/wcsapi/**/*', '!docs/wcs/wcsapi.rst']
 
 wcs.wcsapi:
   - astropy/wcs/wcsapi/**/*
