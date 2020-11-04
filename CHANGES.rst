@@ -7,6 +7,8 @@ New Features
 astropy.config
 ^^^^^^^^^^^^^^
 
+- Something changed.
+
 astropy.constants
 ^^^^^^^^^^^^^^^^^
 
