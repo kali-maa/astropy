@@ -8,8 +8,7 @@ jobs:
     name: Check if milestone is set
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout repo
-      uses: actions/checkout@v2  
     - name: Check milestone
       uses: pllim/action-check_milestone_exists@main
-      id: custom_action_milestone
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
