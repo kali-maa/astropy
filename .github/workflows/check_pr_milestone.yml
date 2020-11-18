@@ -3,7 +3,7 @@ name: Check PR milestone
 on:
   pull_request_target:
     types: [opened]
-  issue:
+  issues:
     types: [milestoned, demilestoned]
 
 jobs:
