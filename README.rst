@@ -4,6 +4,8 @@ Astropy
 
 |Travis Status| |CircleCI Status| |Coverage Status| |PyPI Status| |Documentation Status|
 
+`/roll d20`
+
 The Astropy Project (http://astropy.org/) is a community effort to develop a
 single core package for Astronomy in Python and foster interoperability between
 Python astronomy packages. This repository contains the core package which is
