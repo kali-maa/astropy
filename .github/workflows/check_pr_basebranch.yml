@@ -1,0 +1,17 @@
+name: Check PR base branch
+
+on:
+  pull_request_target:
+    types: [opened, synchronize, labeled, unlabeled]
+
+jobs:
+  basebranch:
+    name: Check if base branch is correct
+    runs-on: ubuntu-latest
+    steps:
+    - name: Check base branch
+      uses: pllim/action-check_pr_basebranch@main
+      env:
+        BASEBRANCH_NAME: master
+        SKIP_BASEBRANCH_CHECK_LABEL: skip-basebranch-check
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
