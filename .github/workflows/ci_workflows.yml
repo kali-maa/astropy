@@ -18,6 +18,7 @@ jobs:
       env:
         BASEBRANCH_NAME: master
         SKIP_BASEBRANCH_CHECK_LABEL: skip-basebranch-check
+        CTX_EVENT: ${{ toJson(github.event) }}
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
   check_skip_ci:
