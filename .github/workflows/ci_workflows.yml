@@ -34,7 +34,7 @@ jobs:
     runs-on: ubuntu-latest
     needs: [basebranch, check_skip_ci]
     steps:
-    - name: Cancel
+    - name: Cancel workflows
       uses: pllim/actions-cancel-workflows@main
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
