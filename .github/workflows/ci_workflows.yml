@@ -20,7 +20,7 @@ jobs:
       env:
         BASEBRANCH_NAME: master
         SKIP_BASEBRANCH_CHECK_LABEL: skip-basebranch-check
-    - name: Cancel workflow if CI is skipped
+    - name: Cancel this workflow if CI is skipped
       uses: pllim/action-skip-ci@main
     - name: Cancel older duplicate workflows
       uses: pllim/actions-cancel-workflows@main
