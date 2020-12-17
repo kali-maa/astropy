@@ -1,11 +1,10 @@
-name: Check PR change log on label event
+name: Check PR change log
 
 on:
   pull_request_target:
-    types: [labeled, unlabeled]
+    types: [opened, synchronize, labeled, unlabeled]
 
-# This check also runs on other PR events at ci_workflows.yml.
-# It is redefined here for label events to avoid overcomplicating CI logic.
+# This is separate from CI on purpose. It should not block or depend on CI.
 jobs:
   changelog_checker:
     name: Check if change log entry is correct
