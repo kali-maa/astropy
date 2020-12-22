@@ -14,7 +14,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Check base branch
-      uses: pllim/action-check_pr_basebranch@ts-action
+      uses: pllim/action-check_pr_basebranch@main
       with:
         BASEBRANCH_NAME: master
         SKIP_BASEBRANCH_CHECK_LABEL: skip-basebranch-check
