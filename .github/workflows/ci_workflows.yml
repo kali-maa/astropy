@@ -17,7 +17,7 @@ jobs:
     steps:
     # Base branch check should run whether we skip CI or not
     - name: Check base branch
-      uses: pllim/action-check_pr_basebranch@ts-action
+      uses: pllim/action-check_pr_basebranch@main
       if: github.event_name == 'pull_request_target' || github.event_name == 'pull_request'
       with:
         BASEBRANCH_NAME: master
