@@ -10,7 +10,7 @@ on:
 
 jobs:
   initial_checks:
-    name: Checks these first before anything else
+    name: Mandatory checks before CI
     runs-on: ubuntu-latest
     steps:
     # Base branch check should run whether we skip CI or not
