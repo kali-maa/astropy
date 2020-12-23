@@ -9,14 +9,20 @@ on:
     - opened
 
 jobs:
-  label_pr:
+  # Only PRs  
+  pr_only:
     runs-on: ubuntu-latest
     if: github.event_name == 'pull_request_target' || github.event_name == 'pull_request'
     steps:
-    - uses: actions/labeler@main
+    - name: Label PR
+      uses: actions/labeler@main
       with:
         repo-token: "${{ secrets.GITHUB_TOKEN }}"
+    # When GitHub can handle milestone/demilestone events for PR, move this out
+    - name: Check PR milestone
+      uses: pllim/action-check_milestone_exists@ts-action
 
+  # PRs and issues
   special_comment:
     name: Comment if today is special
     runs-on: ubuntu-latest
