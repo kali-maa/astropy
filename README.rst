@@ -2,7 +2,7 @@
 Astropy
 =======
 
-Test tes test test tests test
+Test
 
 |Actions Status| |CircleCI Status| |Coverage Status| |PyPI Status| |Documentation Status|
 
