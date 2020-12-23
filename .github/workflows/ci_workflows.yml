@@ -12,22 +12,22 @@ jobs:
   initial_checks:
     name: Checks these first before anything else
     runs-on: ubuntu-latest
-    env:
-      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     steps:
     # Base branch check should run whether we skip CI or not
     - name: Check base branch
       uses: pllim/action-check_pr_basebranch@main
-      if: github.event_name == 'pull_request_target' || github.event_name == 'pull_request'
       with:
         BASEBRANCH_NAME: master
         SKIP_BASEBRANCH_CHECK_LABEL: skip-basebranch-check
     - name: Failure means CI is skipped on purpose
       uses: pllim/action-skip-ci@main
-      if: github.event_name == 'pull_request_target' || github.event_name == 'pull_request'
+      with:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     # This should only run if we did not skip CI
-    - name: Cancel duplicates
-      uses: pllim/actions-cancel-workflows@main
+    - name: Cancel Previous Runs
+      uses: styfle/cancel-workflow-action@0.6.0
+      with:
+        access_token: ${{ secrets.GITHUB_TOKEN }}
 
   # The rest only run if above are done
 
