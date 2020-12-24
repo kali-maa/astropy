@@ -1,0 +1,23 @@
+name: Check external releases
+
+on:
+  schedule:
+    # Weekly Tuesday 6 AM build.
+    # * is a special character in YAML so you have to quote this string.
+    - cron: '0 6 * * 2'
+
+jobs:
+  check_releases:
+    name: Open issue if new release found
+    runs-on: ubuntu-latest
+    env:
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    steps:
+    - name: Check CFITSIO release
+      uses: pllim/actions-check_cfitsio_release@main
+      env:
+        CFITSIO_CHECK_N_DAYS: 7
+    - name: Check WCSLIB release
+      uses: pllim/actions-check_wcslib_release@main
+      env:
+        WCSLIB_CHECK_N_DAYS: 7
