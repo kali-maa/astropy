@@ -10,14 +10,14 @@ jobs:
   check_releases:
     name: Open issue if new release found
     runs-on: ubuntu-latest
-    env:
-      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     steps:
     - name: Check CFITSIO release
       uses: pllim/actions-check_cfitsio_release@main
-      env:
+      with:
         CFITSIO_CHECK_N_DAYS: 7
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     - name: Check WCSLIB release
       uses: pllim/actions-check_wcslib_release@main
       env:
         WCSLIB_CHECK_N_DAYS: 7
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
