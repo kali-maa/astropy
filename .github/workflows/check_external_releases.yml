@@ -2,9 +2,9 @@ name: Check external releases
 
 on:
   schedule:
-    # Weekly Tuesday 6 AM build.
+    # Weekly Friday 6 AM build.
     # * is a special character in YAML so you have to quote this string.
-    - cron: '0 6 * * 2'
+    - cron: '0 6 * * 5'
 
 jobs:
   check_releases:
@@ -18,6 +18,6 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     - name: Check WCSLIB release
       uses: pllim/actions-check_wcslib_release@main
-      env:
+      with:
         WCSLIB_CHECK_N_DAYS: 7
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
