@@ -10,4 +10,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Check milestone
-      uses: pllim/action-check_milestone_exists@ts-action
+      uses: pllim/action-check_milestone_exists@main
