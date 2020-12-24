@@ -32,5 +32,4 @@ jobs:
     - name: Special comment
       uses: pllim/action-special_pr_comment@ts-action
       with:
-        SPECIAL_DAYS: 04-01,12-23
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
