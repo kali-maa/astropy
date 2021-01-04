@@ -2,7 +2,7 @@
 Astropy
 =======
 
-Test custom label
+Test custom label 1
 
 |Actions Status| |CircleCI Status| |Coverage Status| |PyPI Status| |Documentation Status|
 
