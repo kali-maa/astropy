@@ -20,7 +20,7 @@ jobs:
         BASEBRANCH_NAME: master
         SKIP_BASEBRANCH_CHECK_LABEL: skip-basebranch-check
     - name: Failure means CI is skipped on purpose
-      uses: pllim/action-skip-ci@main
+      uses: pllim/action-skip-ci@user-labels
       with:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     # This should only run if we did not skip CI
