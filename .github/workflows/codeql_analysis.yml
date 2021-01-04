@@ -26,7 +26,7 @@ jobs:
     - name: Check skip CodeQL
       uses: pllim/action-skip-ci@user-labels
       with:
-        SKIP_DIRECTIVES: '[skip codeql]'
+        SKIP_DIRECTIVES: '[skip codeql],[codeql skip]'
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     # This should only run if we did not skip CI
     - name: Cancel Previous Runs
