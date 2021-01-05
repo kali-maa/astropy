@@ -24,7 +24,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Check skip CodeQL
-      uses: pllim/action-skip-ci@user-labels
+      uses: pllim/action-skip-ci@main
       with:
         SKIP_DIRECTIVES: '[skip codeql],[codeql skip]'
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
