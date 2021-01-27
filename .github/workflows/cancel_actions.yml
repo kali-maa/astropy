@@ -13,6 +13,7 @@ jobs:
     - name: Who am I
       env:
         EVENT: ${{ github.event.workflow_run }}
+      run: echo $EVENT  
     #- name: Cancel Previous Runs
     #  uses: styfle/cancel-workflow-action@ce177499ccf9fd2aded3b0426c97e5434c2e8a73
     #  with:
