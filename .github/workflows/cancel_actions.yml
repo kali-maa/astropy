@@ -10,11 +10,6 @@ jobs:
   cancel:
     runs-on: ubuntu-latest
     steps:
-    - name: Who Am I
-      env:
-        CONTEXT: ${{ toJson(github.context) }}
-        EVENT: ${{ toJson(github.event) }}
-      run: echo "See EVENT and CONTEXT"
     - name: Cancel Previous Runs
       uses: pllim/cancel-workflow-action@support-pr-workflow-run
       with:
