@@ -6,6 +6,7 @@ on:
     types:
       - requested
 
+# Note: This cancels previous runs regardless whether CI is skipped.
 jobs:
   cancel:
     runs-on: ubuntu-latest
