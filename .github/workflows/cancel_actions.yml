@@ -18,5 +18,4 @@ jobs:
     - name: Cancel Previous Runs
       uses: pllim/cancel-workflow-action@support-pr-workflow-run
       with:
-        ignore_sha: true
         workflow_id: ${{ github.event.workflow.id }}
