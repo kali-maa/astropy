@@ -12,21 +12,12 @@ jobs:
   initial_checks:
     name: Mandatory checks before CI
     runs-on: ubuntu-latest
-    outputs:
-      run_next: ${{ steps.skip_ci_step.outputs.run_next }}
     steps:
-    # Base branch check should run whether we skip CI or not
     - name: Check base branch
       uses: pllim/action-check_pr_basebranch@main
       with:
         BASEBRANCH_NAME: master
         SKIP_BASEBRANCH_CHECK_LABEL: skip-basebranch-check
-    - name: Failure means CI is skipped on purpose
-      uses: OpenAstronomy/action-skip-ci@main
-      id: skip_ci_step
-      with:
-        NO_FAIL: true
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
   # The rest only run if above are done
 
@@ -34,7 +25,6 @@ jobs:
     name: ${{ matrix.name }}
     runs-on: ${{ matrix.os }}
     needs: initial_checks
-    if: needs.initial_checks.outputs.run_next == 'true'
     strategy:
       fail-fast: true
       matrix:
@@ -110,7 +100,6 @@ jobs:
     name: ${{ matrix.name }}
     runs-on: ${{ matrix.os }}
     needs: initial_checks
-    if: needs.initial_checks.outputs.run_next == 'true'
     strategy:
       fail-fast: false
       matrix:
