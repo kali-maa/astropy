@@ -10,28 +10,24 @@ on:
 
 jobs:
   basebranch:
-    name: Check if base branch is correct
+    name: Check base branch
     runs-on: ubuntu-latest
     steps:
-    - name: Check base branch
-      uses: pllim/action-check_pr_basebranch@main
+    - uses: actions/github-script@v3
+      if: github.event_name == 'pull_request'
       with:
-        BASEBRANCH_NAME: master
-        SKIP_BASEBRANCH_CHECK_LABEL: skip-basebranch-check
-
-  check_skip_ci:
-    name: Failure means CI is skipped on purpose
-    runs-on: ubuntu-latest
-    steps:
-    - name: Check skip CI
-      uses: pllim/action-skip-ci@main
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        script: |
+          const skip_label = 'skip-basebranch-check';
+          const allowed_basebranch = 'master';
+          const pr = context.payload.pull_request;
+          if (pr.base.ref !== allowed_basebranch) {
+            core.setFailed(`PR opened against ${pr.base.ref}, not ${allowed_basebranch}`);
+          }
 
   tests:
     name: ${{ matrix.name }}
     runs-on: ${{ matrix.os }}
-    needs: [basebranch, check_skip_ci]
+    needs: basebranch
     strategy:
       fail-fast: true
       matrix:
@@ -106,7 +102,7 @@ jobs:
   allowed_failures:
     name: ${{ matrix.name }}
     runs-on: ${{ matrix.os }}
-    needs: [basebranch, check_skip_ci]
+    needs: basebranch
     strategy:
       fail-fast: false
       matrix:
