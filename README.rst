@@ -2,6 +2,8 @@
 Astropy
 =======
 
+This should pass because of special label
+
 |Travis Status| |CircleCI Status| |Coverage Status| |PyPI Status| |Documentation Status|
 
 The Astropy Project (http://astropy.org/) is a community effort to develop a
