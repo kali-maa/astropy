@@ -14,10 +14,16 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Check base branch
-      uses: pllim/action-check_pr_basebranch@main
+      uses: actions/github-script@v3
+      if: github.event_name == 'pull_request'
       with:
-        BASEBRANCH_NAME: master
-        SKIP_BASEBRANCH_CHECK_LABEL: skip-basebranch-check
+        script: |
+          const skip_label = 'skip-basebranch-check';
+          const allowed_basebranch = 'master';
+          const pr = context.payload.pull_request;
+          if (pr.base.ref !== allowed_basebranch) {
+            core.setFailed(`PR opened against ${pr.base.ref}, not ${allowed_basebranch}`);
+          }
 
   # The rest only run if above are done
 
