@@ -12,6 +12,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Cancel previous runs
-      uses: pllim/cancel-workflow-action@support-pr-workflow-run
+      uses: styfle/cancel-workflow-action@3d86a7cc43670094ac248017207be0295edbc31d  # 0.8.0
       with:
         workflow_id: ${{ github.event.workflow.id }}
