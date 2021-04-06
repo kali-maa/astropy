@@ -24,8 +24,8 @@ jobs:
             core.info("This is not a pull request.");
             return;
           }
-          if (pr.milestone) {
-            core.info(`This pull request has a milestone set: ${pr.milestone.title}`);
+          if (context.payload.issue.milestone) {
+            core.info(`This pull request has a milestone set: ${context.payload.milestone.title}`);
           } else {
             core.setFailed("A maintainer needs to set the milestone for this pull request.");
           }
