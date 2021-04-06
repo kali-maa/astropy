@@ -19,7 +19,8 @@ jobs:
       with:
         script: |
           const pr = context.payload.pull_request;
-          if (!pr) {
+          // This if was suggested by GitHub Help Desk as a workaround.
+          if (typeof context.payload.issue.pull_request == "undefined") {
             core.info("This is not a pull request.");
             return;
           }
