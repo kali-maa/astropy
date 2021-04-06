@@ -2,6 +2,8 @@ name: Check PR milestone
 
 on:
   # GitHub Help Desk says adding issues will fix it?
+  # Not really. It does trigger when milestone happens on PR but no PR info
+  # in context, so there is no way to not run this for issues but we don't want to.
   issues:
     types: [opened, milestoned, demilestoned]
   pull_request:
