@@ -3,7 +3,7 @@ name: Check PR milestone
 on:
   # GitHub Help Desk says adding issues will fix it?
   issues:
-    types: [milestoned, demilestoned]
+    types: [opened, milestoned, demilestoned]
   pull_request:
     types: [opened, milestoned, demilestoned]
 
@@ -14,10 +14,13 @@ jobs:
     steps:
     - name: Check milestone
       uses: actions/github-script@v3
-      if: github.event_name == 'pull_request'
       with:
         script: |
           const pr = context.payload.pull_request;
+          if (!pr) {
+            core.info("This is not a pull request.");
+            return;
+          }
           if (pr.milestone) {
             core.info(`This pull request has a milestone set: ${pr.milestone.title}`);
           } else {
