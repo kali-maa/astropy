@@ -2,7 +2,7 @@ name: Check PR milestone
 
 on:
   pull_request:
-    types: [opened, milestoned, demilestoned]
+    types: [opened, reopened, milestoned, demilestoned]
 
 jobs:
   milestone:
