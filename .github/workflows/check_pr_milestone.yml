@@ -10,4 +10,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Check milestone
-      uses: pllim/action-check_milestone_exists@main
+      uses: actions/github-script@v3
+      with:
+        script: |
+          const pr = context.payload.pull_request;
+          if (pr.milestone) {
+            core.info(`This pull request has a milestone set: ${pr.milestone.title}`);
+          } else {
+            core.setFailed("A maintainer needs to set the milestone for this pull request.");
+          }
