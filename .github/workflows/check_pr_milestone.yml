@@ -1,8 +1,11 @@
 name: Check PR milestone
 
 on:
+  # GitHub Help Desk says adding issues will fix it?
+  issues:
+    types: [milestoned, demilestoned]
   pull_request:
-    types: [opened, reopened, milestoned, demilestoned]
+    types: [opened, milestoned, demilestoned]
 
 jobs:
   milestone:
@@ -11,6 +14,7 @@ jobs:
     steps:
     - name: Check milestone
       uses: actions/github-script@v3
+      if: github.event_name == 'pull_request'
       with:
         script: |
           const pr = context.payload.pull_request;
