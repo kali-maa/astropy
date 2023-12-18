@@ -197,7 +197,7 @@ utils:
 - changed-files:
   - any-glob-to-any-file:
     - cextern/expat/**/*
-  - all-globs-to-any-file:
+  - all-globs-to-all-files:
     - '**/utils/**/*'
     - '!astropy/utils/iers/**/*'
     - '!docs/utils/iers.rst'
