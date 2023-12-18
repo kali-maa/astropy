@@ -13,8 +13,6 @@ Docs:
     - .mailmap
     - .readthedocs.yaml
     - '*.md'
-
-Docs:
 - all:
   - changed-files:
     - any-glob-to-any-file:
@@ -202,8 +200,6 @@ utils:
 - changed-files:
   - any-glob-to-any-file:
     - cextern/expat/**/*
-
-utils:
 - all:
   - changed-files:
     - any-glob-to-any-file:
@@ -244,8 +240,6 @@ wcs:
 - changed-files:
   - any-glob-to-any-file:
     - cextern/wcslib/**/*
-
-wcs:
 - all:
   - changed-files:
     - any-glob-to-any-file:
