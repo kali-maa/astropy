@@ -7,6 +7,10 @@ import numpy as np
 __all__ = ["deserialize_class", "wcs_info_str"]
 
 
+def fake_fun1():
+    pass
+
+
 def deserialize_class(tpl, construct=True):
     """
     Deserialize classes recursively.
