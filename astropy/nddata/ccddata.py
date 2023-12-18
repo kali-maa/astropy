@@ -30,6 +30,8 @@ _unc_cls_to_name = {cls: cls.__name__ for cls in _known_uncertainties}
 # if the unit is None!
 _config_ccd_requires_unit = True
 
+# fake comment: hmm should import fake_func here?
+
 
 def _arithmetic(op):
     """Decorator factory which temporarily disables the need for a unit when

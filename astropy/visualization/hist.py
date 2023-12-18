@@ -5,6 +5,10 @@ from astropy.stats.histogram import calculate_bin_edges
 __all__ = ["hist"]
 
 
+def fake_func():
+    pass
+
+
 def hist(x, bins=10, ax=None, max_bins=1e5, **kwargs):
     """Enhanced histogram function.
 
