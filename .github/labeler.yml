@@ -202,13 +202,8 @@ utils:
     - cextern/expat/**/*
 - all:
   - changed-files:
-    - any-glob-to-any-file:
-      - '**/utils/**/*'
-    - all-globs-to-all-files:
-      - '!astropy/utils/iers/**/*'
-      - '!docs/utils/iers.rst'
-      - '!astropy/utils/masked/**/*'
-      - '!docs/utils/masked/**/*'
+    - any-glob-to-any-file: '**/utils/**/*'
+    - all-globs-to-all-files: ['!astropy/utils/iers/**/*', '!docs/utils/iers.rst', '!astropy/utils/masked/**/*', '!docs/utils/masked/**/*']
 
 utils.iers:
 - changed-files:
