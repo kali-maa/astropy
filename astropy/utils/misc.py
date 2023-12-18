@@ -45,6 +45,10 @@ _NOT_OVERWRITING_MSG_MATCH = (
 )
 
 
+def fake_function():
+    return 42
+
+
 def isiterable(obj):
     """Returns `True` if the given object is iterable."""
     try:

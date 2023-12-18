@@ -15,6 +15,10 @@ from astropy.utils import data, misc
 from astropy.utils.exceptions import AstropyDeprecationWarning
 
 
+def test_fake_function():
+    pass
+
+
 def test_isiterable():
     assert misc.isiterable(2) is False
     assert misc.isiterable([2]) is True
