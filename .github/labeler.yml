@@ -13,13 +13,10 @@ Docs:
     - .mailmap
     - .readthedocs.yaml
     - '*.md'
-- all:
-  - changed-files:
-    - any-glob-to-any-file:
-      - '**/*.rst'
-    - all-globs-to-all-files:
-      - '!CHANGES.rst'
-      - '!docs/changes/*'
+  - all-globs-to-any-file:
+    - '**/*.rst'
+    - '!CHANGES.rst'
+    - '!docs/changes/*'
 
 testing:
 - changed-files:
@@ -200,10 +197,12 @@ utils:
 - changed-files:
   - any-glob-to-any-file:
     - cextern/expat/**/*
-- all:
-  - changed-files:
-    - any-glob-to-any-file: '**/utils/**/*'
-    - all-globs-to-all-files: ['!astropy/utils/iers/**/*', '!docs/utils/iers.rst', '!astropy/utils/masked/**/*', '!docs/utils/masked/**/*']
+  - all-globs-to-any-file:
+    - '**/utils/**/*'
+    - '!astropy/utils/iers/**/*'
+    - '!docs/utils/iers.rst'
+    - '!astropy/utils/masked/**/*'
+    - '!docs/utils/masked/**/*'
 
 utils.iers:
 - changed-files:
@@ -219,12 +218,10 @@ utils.masked:
     - docs/utils/masked/**/*
 
 visualization:
-- all:
-  - changed-files:
-    - any-glob-to-any-file:
-      - '**/visualization/**/*'
-    - all-globs-to-all-files:
-      - '!**/visualization/wcsaxes/**/*'
+- changed-files:
+  - all-globs-to-any-file:
+    - '**/visualization/**/*'
+    - '!**/visualization/wcsaxes/**/*'
 
 visualization.wcsaxes:
 - changed-files:
@@ -235,13 +232,10 @@ wcs:
 - changed-files:
   - any-glob-to-any-file:
     - cextern/wcslib/**/*
-- all:
-  - changed-files:
-    - any-glob-to-any-file:
-      - '**/wcs/**/*'
-    - all-globs-to-all-files:
-      - '!astropy/wcs/wcsapi/**/*'
-      - '!docs/wcs/wcsapi.rst'
+  - all-globs-to-any-file:
+    - '**/wcs/**/*'
+    - '!astropy/wcs/wcsapi/**/*'
+    - '!docs/wcs/wcsapi.rst'
 
 wcs.wcsapi:
 - changed-files:
