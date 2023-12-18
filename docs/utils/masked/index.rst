@@ -4,6 +4,8 @@
 Masked Values (`astropy.utils.masked`)
 **************************************
 
+.. note:: Just a test, do not merge.
+
 Often, data sets are incomplete or corrupted and it would be handy to be able
 to mask certain values.  Astropy provides a |Masked| class to help represent
 such data sets.
