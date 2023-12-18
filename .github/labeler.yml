@@ -16,8 +16,7 @@ Docs:
 - all:
   - changed-files:
     - any-glob-to-any-file:
-      - '*.rst'
-      - 'docs/**/*.rst'
+      - '**/*.rst'
     - all-globs-to-all-files:
       - '!CHANGES.rst'
       - '!docs/changes/*'
