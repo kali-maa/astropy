@@ -2,6 +2,8 @@
 Astropy
 =======
 
+ALL YOUR BASE ARE BELONG TO US
+
 .. container::
 
     |Actions Status| |CircleCI Status| |Coverage Status| |PyPI Status| |Documentation Status| |Pre-Commit| |isort Status| |black| |Zenodo|
