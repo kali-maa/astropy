@@ -15,6 +15,8 @@ for performing astronomy and astrophysics with Python.
 Table of Contents
 =================
 
+A change that does not require change log.
+
 - `Installation <#installation>`_
 - `Contributing <#contributing>`_
 - `Getting Started with GitHub Codespaces <#getting-started-with-github-codespaces>`_
