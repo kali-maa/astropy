@@ -18,6 +18,8 @@ packages used in the field. This repository contains the core library.
 Installation
 ============
 
+blah blah 2
+
 To install `astropy` from PyPI, use:
 
 .. code-block:: bash
