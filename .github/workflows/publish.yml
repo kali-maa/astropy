@@ -18,7 +18,7 @@ permissions:
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
-  cancel-in-progress: true
+  cancel-in-progress: ${{ github.event_name != 'pull_request' || (github.event.action != 'labeled' && contains(github.event.pull_request.labels.*.name, 'Build all wheels')) || (github.event.action == 'labeled' && github.event.label.name == 'Build all wheels') }}
 
 jobs:
   build_and_publish:

@@ -23,7 +23,7 @@ on:
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
-  cancel-in-progress: true
+  cancel-in-progress: ${{ github.event_name != 'pull_request' || (github.event.action != 'labeled' && contains(github.event.pull_request.labels.*.name, 'Extra CI')) || (github.event.action == 'labeled' && github.event.label.name == 'Extra CI') }}
 
 env:
   ARCH_ON_CI: "normal"
