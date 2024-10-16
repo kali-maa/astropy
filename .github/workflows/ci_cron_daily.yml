@@ -21,10 +21,6 @@ on:
     tags:
     - '*'
 
-concurrency:
-  group: ${{ github.workflow }}-${{ github.ref }}
-  cancel-in-progress: true
-
 env:
   ARCH_ON_CI: "normal"
   IS_CRON: "true"
@@ -36,6 +32,9 @@ jobs:
   tests:
     runs-on: ${{ matrix.os }}
     if: (github.repository == 'astropy/astropy' && (github.event_name == 'schedule' || github.event_name == 'push' || github.event_name == 'workflow_dispatch' || (github.event_name == 'pull_request' && github.event.action != 'labeled' && contains(github.event.pull_request.labels.*.name, 'Extra CI')) || (github.event_name == 'pull_request' && github.event.action == 'labeled' && github.event.label.name == 'Extra CI')))
+    concurrency:
+      group: extra_ci_job
+      cancel-in-progress: true
     strategy:
       fail-fast: false
       matrix:
